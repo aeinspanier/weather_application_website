@@ -13,7 +13,7 @@ weatherForm.addEventListener('submit', (e) => {
     e.preventDefault()
 
     mess2.textContent = 'Loading...'
-    const httpAddress = 'http://localhost:3000/weather?address=' + search.value
+    const httpAddress = '/weather?address=' + search.value
     fetch(httpAddress).then((response) => {
         response.json().then((data) => {
             if(data.error){
